@@ -2,6 +2,15 @@
 #include <string>
 using namespace std;
 
+struct buku{
+    int id;
+    string judul;
+    string penulis;
+    int tahun;
+    bool tersedia;
+    buku *next;
+};
+buku *headBook=nullptr;
 
 void manajemenBuku();
 void menuUtama(){
