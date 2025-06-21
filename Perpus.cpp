@@ -2,6 +2,13 @@
 #include <string>
 using namespace std;
 
+struct anggota{
+    int id;
+    string nama;
+    string alamat;
+    anggota *next;
+};
+anggota *headAnggota=nullptr;
 struct buku{
     int id;
     string judul;
@@ -40,6 +47,10 @@ void tampilBuku(){
     if(headBook == nullptr){
         cout<<"LIST BUKU KOSONG!"<<endl;
         cout<<"Silahkan tambahkan buku terlebih dahulu."<<endl;
+        cout << "Tekan Enter untuk kembali...";
+        cin.ignore();
+        cin.get();
+        system("cls");
         return;
     }
 
@@ -60,6 +71,7 @@ void tampilBuku(){
     cout << "Tekan Enter untuk kembali...";
     cin.ignore();
     cin.get();
+    system("cls");
 }
 
 void hapusBuku(){
@@ -67,6 +79,10 @@ void hapusBuku(){
     if(headBook == nullptr){
         cout<<"LIST BUKU KOSONG!"<<endl;
         cout<<"Silahkan tambahkan buku terlebih dahulu."<<endl;
+        cout << "Tekan Enter untuk kembali...";
+        cin.ignore();
+        cin.get();
+        system("cls");
         return;
     }
 
@@ -158,6 +174,7 @@ void menuUtama(){
                 system ("cls");
                 break;
             case 2:
+                
                 break;
             case 3:
                 break;
