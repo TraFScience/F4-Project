@@ -20,6 +20,15 @@ struct buku{
 };
 buku *headBook = nullptr;
 
+struct peminjaman{
+    int idAnggota;
+    int idBuku;
+    string tanggalPeminjaman;
+    string tanggalKembali;
+    peminjaman *next;
+};
+peminjaman *headPeminjaman = nullptr;
+
 
 
 void tambahBuku(){
@@ -285,6 +294,8 @@ void manajemenAnggota(){
         }
     } while (pilihan != 4);
 }
+
+
 
 void menuUtama(){
     int pilihan;
